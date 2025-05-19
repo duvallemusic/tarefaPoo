@@ -14,7 +14,7 @@ class Parquimetro {
         for (let opcao of this.opcoes) {
           while (valorRestante >= opcao.preco) {
             valorRestante -= opcao.preco;
-            valorRestante = parseFloat(valorRestante.toFixed(2)); // Corrigir precisão
+            valorRestante = parseFloat(valorRestante.toFixed(2)); 
             tempoTotal += opcao.tempo;
           }
         }
@@ -37,7 +37,7 @@ class Parquimetro {
       const parquimetro = new Parquimetro();
       
       if (isNaN(valor) || valor <= 0.99) {
-        document.getElementById('resultado').innerText = 'Por favor, insira um valor válido.';
+        document.getElementById('resultado').innerText = 'Valor insuficiente.';
         return;
       }
 
