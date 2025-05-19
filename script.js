@@ -4,6 +4,7 @@ class Parquimetro {
           { preco: 3.00, tempo: 120 }, // 2 horas
           { preco: 1.75, tempo: 60 },  // 1 hora
           { preco: 1.00, tempo: 30 },  // 30 minutos
+          this.tempoMaximo = 120
         ];
       }
 
@@ -12,7 +13,7 @@ class Parquimetro {
         let valorRestante = parseFloat(valorInserido.toFixed(2));
 
         for (let opcao of this.opcoes) {
-          while (valorRestante >= opcao.preco) {
+          while (valorRestante >= opcao.preco && tempoTotal + opcao.tempo <= this.tempoMaximo) {
             valorRestante -= opcao.preco;
             valorRestante = parseFloat(valorRestante.toFixed(2)); 
             tempoTotal += opcao.tempo;
