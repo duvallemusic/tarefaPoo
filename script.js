@@ -37,7 +37,7 @@ class Parquimetro {
       const parquimetro = new Parquimetro();
       
       if (isNaN(valor) || valor <= 0.99) {
-        document.getElementById('resultado').innerText = 'Por favor, insira um valor válido.';
+        document.getElementById('resultado').innerText = 'valor insuficiente';
         return;
       }
 
